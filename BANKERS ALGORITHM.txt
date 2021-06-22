@@ -69,3 +69,5 @@ int main()
 	return 0;
 }
 
+OUTPUT :
+https://github.com/Tejaswini1912b7/OS-LAB/blob/main/B7_Banker's_Algo_OUTPUT.png
