@@ -1,11 +1,14 @@
 AIM  :  To write a C program for implementation of Priority scheduling algorithms
 
-ALGORITHM:
+ALGORITHM: 
 START
-	Step 1: Declare the required variables.
-	Step 2: Read the processes and their priorities.
-
-STOP
+	Declare and read the values of Burst Times and their Priorities for required number of processes.
+	Based on the priority Time, Sort all the Processes.
+ 	Calculate the following:
+	    1. Finishing Time = Burst Time + Waiting Time
+	      (or) Waiting Time = Turnaround Time - Burst Time
+	    2. Average Waiting Time and Average Turnaround Time.
+STOP 
 
 CODE:
 // Priority Scheduling Algorithm
