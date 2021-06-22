@@ -1,8 +1,15 @@
-﻿BANKERS ALGORITHM :
+BANKERS ALGORITHM :
 Introduction :
 	It is a banker algorithm used to avoid deadlock and allocate resources safely to each process in the computer system. The 'S-State' examines all possible tests or activities before deciding whether the allocation should be allowed to each process. It also helps the operating system to successfully share the resources between all the processes. The banker's algorithm is named because it checks whether a person should be sanctioned a loan amount or not to help the bank system safely simulate allocation resources.
 
 Algorithm :
+START
+	Input n as 5 and m as 3 where n is no.of processes and m is resources count.
+	Declare and Initialize the 2D arrays 'alloc', 'max', 'available' with the values.
+	Initialise Finish Array(f) as a frequency array.
+	Initialise need array and nead = max - alloc
+	Now, Based on the need, avail, alloc and flag derive the ans matrix which is the safe sequence. 
+STOP
 
 Code :
 // Banker's Algorithm
