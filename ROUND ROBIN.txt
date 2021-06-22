@@ -2,9 +2,15 @@ AIM  :  To write a C program for implementation of Round Robin Algorithm
 
 ALGORITHM:
 START
-	Step 1: Declare the required variables.
-	Step 2: Read the processes and their priorities.
-
+	Input the Arrival and Burst Times of all the required Processes.
+	Organize all processes according to their arrival time in the ready queue.
+	The queue structure of the ready queue is based on the FIFO structure to execute all CPU processes.
+	Now, Push the first process from the ready queue to execute its task for a fixed time, allocated by each process that arrives in the queue.
+	If the burst time of the process is left, push the process end of the ready queue.
+	CPU saves the previous state of the process, which helps to resume from the point where it is interrupted. 
+	The scheduler selects another process from the ready queue to execute its tasks. 
+	When a process finishes its task when it's burst time is finished.
+	Similarly, Repeat all the steps to execute the process until the work has finished.
 STOP
 
 CODE:
