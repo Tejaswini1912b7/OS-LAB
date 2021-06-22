@@ -2,9 +2,13 @@ AIM  :  To write a C program for implementation of SJF Algorithm
 
 ALGORITHM:
 START
-	Step 1: Declare the required variables.
-	Step 2: Read the processes and their priorities.
-
+	Input the Burst Time of the Processes
+	Sort all the process according to the arrival time or Burst Times. 
+	Then select that process which has minimum arrival time or minimum Burst time. 
+	Find waiting time for all other processes i.e. for process i -> wt[i] = bt[i-1] + wt[i-1] .
+	Find turnaround time = waiting_time + burst_time for all processes.
+	Find average waiting time = total_waiting_time / no_of_processes.
+	Similarly, find average turnaround time = total_turn_around_time / no_of_processes.
 STOP
 
 CODE:
