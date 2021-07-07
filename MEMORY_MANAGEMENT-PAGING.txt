@@ -1,0 +1,56 @@
+AIM  :  To write a C program to implement memory management using paging technique.
+
+ALGORITHM:
+START
+	Step 1 : Read the base address, page size, number of pages and memory unit.
+	Step 2 : If the memory limit is less than the base address display the memory limit is less than limit.
+	Step 3 : Create the page table with the number of pages and page address.
+	Step 4 : Read the page number and displacement value.
+	Step 5 : If the page number and displacement value is valid, add the displacement value with the address corresponding to the page number and display the result.
+	Step 6 : Display the page is not found or displacement should be less than page size.
+STOP
+
+CODE:
+//  Memory Management - Paging
+#include<stdio.h>
+int main()
+{
+    int ms, ps, nop, np, rempages, i, j, x, y, pa, offset;
+    int s[10], fno[10][20];
+    printf("\nEnter memory size :");
+    scanf("%d",&ms);
+    printf("\nEnter page size : ");
+    scanf("%d",&ps);
+    nop = ms/ps;
+    printf("\nNumber of pages available in memory are : %d ",nop);
+    printf("\nEnter number of processes : ");
+    scanf("%d",&np);
+    rempages = nop;
+    for(i=1;i<=np;i++)
+    {
+        printf("\nEnter number of pages required for p[%d] : ",i);
+        scanf("%d",&s[i]);
+        if(s[i] >rempages)
+        {
+            printf("\nMemory is Full");
+            break;
+        }
+        rempages = rempages - s[i];
+        printf("\nEnter pagetable for p[%d] : ",i);
+        for(j=0;j<s[i];j++)
+            scanf("%d",&fno[i][j]);
+    }
+    printf("\nEnter Logical Address to find Physical Address ");
+    printf("\nEnter process no. and pagenumber and offset : ");
+    scanf("%d %d %d",&x,&y, &offset);
+    if(x>np || y>=s[i] || offset>=ps)
+    {
+        printf("\nInvalid Process or Page Number or offset");
+    }
+    else
+    {
+        pa=fno[x][y]*ps+offset;
+        printf("\nThe Physical Address is : %d",pa);
+    }
+    return 0;
+}
